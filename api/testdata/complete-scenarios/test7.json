@@ -3470,10 +3470,9 @@
                       "street": "FC EMPLOYER STREET XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "street2": "FC EMPLOYER APT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "city": "FC EMPLOYER CITY XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
-                      "state": "JQ",
-                      "zipcode": "88888",
-                      "country": "United States",
-                      "validated": true
+                      "state": "OR",
+                      "zipcode": "97201",
+                      "country": "United States"
                     }
                   },
                   "EmployerAddressNotApplicable": {
@@ -3695,8 +3694,8 @@
                       "street": "FC EMPLOYER STREET XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "street2": "FC EMPLOYER APT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "city": "FC EMPLOYER CITY XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
-                      "state": "JQ",
-                      "zipcode": "88888",
+                      "state": "CA",
+                      "zipcode": "93953",
                       "country": "United States"
                     }
                   },
@@ -5561,10 +5560,9 @@
                       "street": "No American can study the character and career of Abraham Lincoln without being carried away by sentimental emotions. We are always inclined to idealize that which we love,--a state of mind very unfavorable to the exercise of sober critical judgment. It i",
                       "street2": "No American can study the character and career of Abraham Lincoln without being carried away by sentimental emotions. We are always inclined to idealize that which we love,--a state of mind very unfavorable to the exercise of sober critical judgment. It i",
                       "city": "No American can study the character and career of Abraham Lincoln without being carried away by sent",
-                      "state": "DQ",
-                      "zipcode": "55555",
-                      "country": "United States",
-                      "validated": true
+                      "state": "CA",
+                      "zipcode": "90210",
+                      "country": "United States"
                     }
                   },
                   "OrganizationAddressNotApplicable": {
@@ -15147,10 +15145,9 @@
                       "street": "MOTHER EMPLOYER STREET XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "street2": "MOTHER EMPLOYER APT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "city": "MOTHER EMPLOYER CITY XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
-                      "state": "LQ",
-                      "zipcode": "88888",
-                      "country": "United States",
-                      "validated": true
+                      "state": "CA",
+                      "zipcode": "93940",
+                      "country": "United States"
                     }
                   },
                   "EmployerAddressNotApplicable": {
@@ -15205,7 +15202,7 @@
                   "FrequencyComments": {
                     "type": "radio",
                     "props": {
-                      "value": ""
+                      "value": "Frequency of contact Other"
                     }
                   },
                   "HasAffiliation": {
@@ -15301,10 +15298,9 @@
                       "street": "FATHER STREET XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "street2": "FATHER APT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
                       "city": "FATHER CITY XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOO",
-                      "state": "HQ",
-                      "zipcode": "55555",
-                      "country": "United States",
-                      "validated": true
+                      "state": "CA",
+                      "zipcode": "93950",
+                      "country": "United States"
                     }
                   },
                   "Aliases": {
@@ -15737,7 +15733,7 @@
                   "DocumentComments": {
                     "type": "textarea",
                     "props": {
-                      "value": ""
+                      "value": "Not a US Citizen Other explanation"
                     }
                   },
                   "DocumentNumber": {
@@ -15901,6 +15897,233 @@
                     "type": "text",
                     "props": {
                       "value": "\"It has long been a grave question whether any government not too strong for the liberties of its people can be strong enough to maintain its existence in great emergencies. On this point, the present rebellion brought our republic to a severe test, and t"
+                    }
+                  }
+                }
+              },
+              {
+                "Item": {
+                  "Address": {
+                    "type": "location",
+                    "props": {
+                      "layout": ""
+                    }
+                  },
+                  "Aliases": {
+                    "type": "collection",
+                    "props": {
+                      "branch": {
+                        "type": ""
+                      },
+                      "items": []
+                    }
+                  },
+                  "Birthdate": {
+                    "type": "datecontrol",
+                    "props": {
+                      "month": "03",
+                      "day": "03",
+                      "year": "1960",
+                      "estimated": false
+                    }
+                  },
+                  "Birthplace": {
+                    "type": "location",
+                    "props": {
+                      "layout": "Birthplace without County",
+                      "city": "Salem",
+                      "state": "OR",
+                      "country": "United States"
+                    }
+                  },
+                  "Citizenship": {
+                    "type": "country",
+                    "props": {
+                      "value": [
+                        "United States"
+                      ]
+                    }
+                  },
+                  "CitizenshipDocumentation": {
+                    "type": "radio",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "CourtAddress": {
+                    "type": "location",
+                    "props": {
+                      "layout": ""
+                    }
+                  },
+                  "CourtName": {
+                    "type": "text",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "Document": {
+                    "type": "radio",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "DocumentComments": {
+                    "type": "textarea",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "DocumentNumber": {
+                    "type": "text",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "Employer": {
+                    "type": "text",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "EmployerAddress": {
+                    "type": "location",
+                    "props": {
+                      "layout": ""
+                    }
+                  },
+                  "EmployerAddressNotApplicable": {
+                    "type": "notapplicable",
+                    "props": {
+                      "applicable": true
+                    }
+                  },
+                  "EmployerNotApplicable": {
+                    "type": "notapplicable",
+                    "props": {
+                      "applicable": false
+                    }
+                  },
+                  "EmployerRelationship": {
+                    "type": "textarea",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "EmployerRelationshipNotApplicable": {
+                    "type": "notapplicable",
+                    "props": {
+                      "applicable": true
+                    }
+                  },
+                  "Expiration": {
+                    "type": "datecontrol",
+                    "props": {
+                      "month": "",
+                      "day": "",
+                      "year": "",
+                      "estimated": false
+                    }
+                  },
+                  "FirstContact": {
+                    "type": "datecontrol",
+                    "props": {
+                      "month": "",
+                      "day": "",
+                      "year": "",
+                      "estimated": false
+                    }
+                  },
+                  "Frequency": {
+                    "type": "radio",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "FrequencyComments": {
+                    "type": "radio",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "HasAffiliation": {
+                    "type": "branch",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "IsDeceased": {
+                    "type": "branch",
+                    "props": {
+                      "value": "Yes"
+                    }
+                  },
+                  "LastContact": {
+                    "type": "datecontrol",
+                    "props": {
+                      "month": "",
+                      "day": "",
+                      "year": "",
+                      "estimated": false
+                    }
+                  },
+                  "MaidenName": {
+                    "type": "name",
+                    "props": {
+                      "first": "",
+                      "firstInitialOnly": false,
+                      "middle": "",
+                      "middleInitialOnly": false,
+                      "noMiddleName": false,
+                      "last": "",
+                      "lastInitialOnly": false,
+                      "suffix": "",
+                      "suffixOther": ""
+                    }
+                  },
+                  "MaidenSameAsListed": {
+                    "type": "branch",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "Methods": {
+                    "type": "checkboxgroup",
+                    "props": {
+                      "values": null
+                    }
+                  },
+                  "MethodsComments": {
+                    "type": "textarea",
+                    "props": {
+                      "value": ""
+                    }
+                  },
+                  "Name": {
+                    "type": "name",
+                    "props": {
+                      "first": "Jane",
+                      "firstInitialOnly": false,
+                      "middle": "Mary",
+                      "middleInitialOnly": false,
+                      "noMiddleName": false,
+                      "last": "Clarence",
+                      "lastInitialOnly": false,
+                      "suffix": "",
+                      "suffixOther": ""
+                    }
+                  },
+                  "Relation": {
+                    "type": "radio",
+                    "props": {
+                      "value": "Mother-in-law",
+                      "checked": true
+                    }
+                  },
+                  "ResidenceDocumentNumber": {
+                    "type": "text",
+                    "props": {
+                      "value": ""
                     }
                   }
                 }
