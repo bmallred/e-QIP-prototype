@@ -237,11 +237,139 @@ export default class Address extends ValidationElement {
     }
   }
 
+  renderAddressField(Component) {
+    return (props) => {
+      const { className, label, name, placeholder = '', value } = props
+
+      return (
+        <Component
+          className={className}
+          disabled={this.props.disabled}
+          label={label}
+          name={name}
+          onBlur={this.blurField}
+          onError={this.handleError}
+          onFocus={this.focusField}
+          onUpdate={this.onAddressUpdate}
+          placeholder={placeholder}
+          required={this.props.required}
+          value={value}
+        />
+      )
+    }
+  }
+
+  renderDomesticAddress() {
+    return (
+      <div>
+        {
+          this.renderAddressField(Street)({
+            name: 'street',
+            className: 'mailing street required',
+            label: this.props.streetLabel,
+            placeholder: this.props.streetPlaceholder,
+            value: this.props.street
+          })
+        }
+        {
+          this.renderAddressField(Street)({
+            name: 'street2',
+            className: 'street2',
+            label: this.props.street2Label,
+            value: this.props.street2
+          })
+        }
+        {
+          this.renderAddressField(City)({
+            name: 'city',
+            label: this.props.cityLabel,
+            value: this.props.value,
+            className: 'city required'
+          })
+        }
+        <div className="state-zip-wrap">
+          <State
+            name="state"
+            className="state required"
+            label={this.props.stateLabel}
+            value={this.props.state}
+            includeStates="true"
+            onUpdate={this.onAddressUpdate}
+            onError={this.handleError}
+            onFocus={this.focusField}
+            onBlur={this.blurField}
+            required={this.props.required}
+            disabled={this.props.disabled}
+          />
+          <ZipCode
+            name="zipcode"
+            ref="us_zipcode"
+            key="us_zipcode"
+            className="zipcode required"
+            label={this.props.zipcodeLabel}
+            value={this.props.zipcode}
+            status={new LocationValidator(this.props).validZipcodeState()}
+            onUpdate={this.onAddressUpdate}
+            onError={this.handleError}
+            onFocus={this.focusField}
+            onBlur={this.blurField}
+            required={this.props.required}
+            disabled={this.props.disabled}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  renderInternationalAddress() {
+    return (
+      <div>
+        {
+          this.renderAddressField(Street)({
+            name: 'street',
+            className: 'mailing street required',
+            label: this.props.streetLabel,
+            placeholder: this.props.streetPlaceholder,
+            value: this.props.street
+          })
+        }
+        {
+          this.renderAddressField(Street)({
+            name: 'street2',
+            className: 'street2',
+            label: this.props.street2Label,
+            value: this.props.street2
+          })
+        }
+        {
+          this.renderAddressField(City)({
+            name: 'city',
+            label: this.props.cityLabel,
+            value: this.props.value,
+            className: 'city required'
+          })
+        }
+        <Country
+          name="country"
+          className="required"
+          label={this.props.countryLabel}
+          {...countryValueResolver(this.props)}
+          excludeUnitedStates="true"
+          onUpdate={this.updateCountry}
+          onError={this.handleError}
+          onFocus={this.props.onFocus}
+          onBlur={this.props.onBlur}
+          required={this.props.required}
+          disabled={this.props.disabled}
+        />
+      </div>
+    )
+  }
+
   render() {
     const book = this.props.addressBooks[this.props.addressBook] || []
     const country = countryString(this.props.country)
     const locationValidator = new LocationValidator(this.props);
-    const instateZipcode = locationValidator.validZipcodeState();
 
     return (
       <div className="address">
@@ -320,127 +448,10 @@ export default class Address extends ValidationElement {
 
         <div className="fields">
           <Show when={locationValidator.isDomestic()}>
-            <div>
-              <Street
-                name="street"
-                className="mailing street required"
-                label={this.props.streetLabel}
-                placeholder={this.props.streetPlaceholder}
-                value={this.props.street}
-                onUpdate={this.onAddressUpdate}
-                onError={this.handleError}
-                onFocus={this.focusField}
-                onBlur={this.blurField}
-                required={this.props.required}
-                disabled={this.props.disabled}
-              />
-              <Street
-                name="street2"
-                className="street2"
-                label={this.props.street2Label}
-                optional={true}
-                value={this.props.street2}
-                disabled={this.props.disabled}
-                onUpdate={this.onAddressUpdate}
-                onError={this.handleError}
-                onFocus={this.focusField}
-                onBlur={this.blurField}
-              />
-              <City
-                name="city"
-                className="city required"
-                label={this.props.cityLabel}
-                value={this.props.city}
-                onUpdate={this.onAddressUpdate}
-                onError={this.handleError}
-                onFocus={this.focusField}
-                onBlur={this.blurField}
-                required={this.props.required}
-                disabled={this.props.disabled}
-              />
-              <div className="state-zip-wrap">
-                <State
-                  name="state"
-                  className="state required"
-                  label={this.props.stateLabel}
-                  value={this.props.state}
-                  includeStates="true"
-                  onUpdate={this.onAddressUpdate}
-                  onError={this.handleError}
-                  onFocus={this.focusField}
-                  onBlur={this.blurField}
-                  required={this.props.required}
-                  disabled={this.props.disabled}
-                />
-                <ZipCode
-                  name="zipcode"
-                  ref="us_zipcode"
-                  key="us_zipcode"
-                  className="zipcode required"
-                  label={this.props.zipcodeLabel}
-                  value={this.props.zipcode}
-                  status={instateZipcode}
-                  onUpdate={this.onAddressUpdate}
-                  onError={this.handleError}
-                  onFocus={this.focusField}
-                  onBlur={this.blurField}
-                  required={this.props.required}
-                  disabled={this.props.disabled}
-                />
-              </div>
-            </div>
+            { this.renderDomesticAddress() }
           </Show>
           <Show when={isInternational(this.props)}>
-            <Street
-              name="street"
-              label={this.props.streetLabel}
-              placeholder={this.props.streetPlaceholder}
-              className="mailing street required"
-              value={this.props.street}
-              onUpdate={this.onAddressUpdate}
-              onError={this.handleError}
-              onFocus={this.props.onFocus}
-              onBlur={this.props.onBlur}
-              required={this.props.required}
-              disabled={this.props.disabled}
-            />
-            <Street
-              name="street2"
-              className="street2"
-              label={this.props.street2Label}
-              optional={true}
-              value={this.props.street2}
-              onUpdate={this.onAddressUpdate}
-              onError={this.handleError}
-              onFocus={this.props.onFocus}
-              onBlur={this.props.onBlur}
-              disabled={this.props.disabled}
-            />
-            <City
-              name="city"
-              className="city required"
-              label={this.props.cityLabel}
-              value={this.props.city}
-              onUpdate={this.onAddressUpdate}
-              onError={this.handleError}
-              onFocus={this.props.onFocus}
-              onBlur={this.props.onBlur}
-              required={this.props.required}
-              disabled={this.props.disabled}
-            />
-            <Country
-              name="country"
-              className="required"
-              label={this.props.countryLabel}
-              {...countryValueResolver(this.props)}
-              excludeUnitedStates="true"
-              onUpdate={this.updateCountry}
-              onError={this.handleError}
-              onFocus={this.props.onFocus}
-              onBlur={this.props.onBlur}
-              required={this.props.required}
-              disabled={this.props.disabled}
-            />
+            { this.renderInternationalAddress() }
           </Show>
           <Show when={locationValidator.isPostOffice()}>
             <div>
@@ -520,7 +531,7 @@ export default class Address extends ValidationElement {
                   className="zipcode required"
                   label={this.props.postOfficeZipcodeLabel}
                   value={this.props.zipcode}
-                  status={instateZipcode}
+                  status={new LocationValidator(this.props).validZipcodeState()}
                   onUpdate={this.onAddressUpdate}
                   onError={this.handleError}
                   onFocus={this.focusField}
